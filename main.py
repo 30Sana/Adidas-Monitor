@@ -3,8 +3,6 @@ import json
 import time
 
 # Function to check product availability
-
-
 def check_product_availability(product_data):
     product_id = product_data['product_id']
     sizes = product_data['_embedded']['variations']
@@ -19,9 +17,8 @@ def check_product_availability(product_data):
             print(f"Product {product_id} | Size {size_name} | Out of Stock")
 
 
-# Delay between each check (in seconds)
 # Adjust this as needed (Botters use 9s at all times and 3s before release date lol)
-check_interval = 9
+check_interval = 9 # Delay between each check (in seconds)
 
 session = requests.Session()
 
